@@ -7,3 +7,4 @@ alembic
 pyodbc
 pymongo[srv]
 pymongo
+langchain_community
