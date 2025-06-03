@@ -3,10 +3,14 @@ import os
 from langchain.agents import initialize_agent, AgentType
 from langchain.tools import tool
 from langchain_openai import ChatOpenAI
-from pydantic import BaseModel
-
+from dotenv import load_dotenv
+from openai import OpenAI
 from vendor_evaluation_tool import update_vendor_scores
-os.environ["OPENAI_API_KEY"] = "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"
+
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=api_key)
+#os.environ["OPENAI_API_KEY"] = ""
 
 from pydantic import BaseModel
 
